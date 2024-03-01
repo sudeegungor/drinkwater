@@ -7,3 +7,4 @@ A chrome extension to remind user to drink water.
 ![image](https://github.com/sudeegungor/drinkwater/assets/124265134/65e8c26e-58b7-4508-a71e-83a497408eee)
 
 
+//I am still working on this project.
