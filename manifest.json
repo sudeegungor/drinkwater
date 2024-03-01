@@ -1,0 +1,31 @@
+{
+    "name":"Drink Water Reminder",
+    "description": "Reminder extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "notifications",
+        "storage",
+        "alarms",
+        "tabs",
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon":"icons8-water-64.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["popup.js"]
+        }
+    ],
+    "content_security_policy": {
+        "script-src": ["'self'", "'nonce-random123'"]
+    }
+    
+    
+}

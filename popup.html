@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink Water</title>
+    <script defer src="popup.js"></script>
+    <style>
+        body {
+            background-color: #bbe4e9;
+            font-family: monospace;
+            align-items: center;
+        }
+
+        h2 {
+            color: #5585b5;
+            text-align: center;
+        }
+
+        #btn {
+            background-color: #ffcbcb;
+            color: #407088;
+            font-size: large;
+            font-family: monospace;
+            text-align: center;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #btn:hover {
+            background-color: #ffaaaa;
+            /* Change to a slightly lighter shade when hovered */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            /* Add a shadow effect when hovered */
+        }
+
+        #btn:active {
+            background-color: #ffaaaa;
+            /* Change to a slightly lighter shade when pressed */
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+            /* Add an inset shadow to simulate the pressed effect */
+        }
+
+        /* Style the input */
+        input[type="number"] {
+            padding: 8px;
+            margin: 5px;
+            font-size: 16px;
+            border: 1px solid #5585b5;
+            border-radius: 5px;
+            width: 50px;
+            /* Adjust width as needed */
+        }
+
+        /* Style the label */
+        label {
+            color: #407088;
+            font-size: 16px;
+            margin-right: 5px;
+        }
+
+        .bottle-container {
+            position: relative;
+            height: 240px;
+            width: 120px;
+           
+        }
+
+        .bottle-container .mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            clip-path: url(#bottle);
+        }
+
+        .bottle-container .mask .fill {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            background: #55C0F3;
+            height: 100%; /* Adjust height for desired progress */
+            width: 100%;
+           
+        }
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>REMIND ME TO DRINK WATER</h2>
+    <form>
+        <label for="quantity">Remind me in every</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="120">
+        <label for="quantity">minutes </label>
+    </form>
+    <button id="btn">Set alarm</button>
+
+    <div class="bottle-container">
+        <div class="mask">
+            <div class="fill" id="fill"></div>
+        </div>
+        <svg width="120" height="240" viewBox="0 0 120 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <clipPath id="bottle">
+                    <path
+                        d="M51.6438 190.92H13.6611C6.66909 190.92 1.00017 185.252 1.00017 178.26L1.00017 93.5676C1.00017 91.0481 2.00038 88.6331 3.78241 86.8542C7.49205 83.1446 7.49205 77.1338 3.78241 73.4241C2.00038 71.6421 1.00017 69.2271 1.00017 66.7107V61.8173C1.00017 47.5579 8.1251 34.2418 19.9915 26.3319V20.0015L45.3133 20.0015V26.3319C57.1798 34.2387 64.3047 47.5548 64.3047 61.8141L64.3047 66.7107C64.3047 69.2302 63.3045 71.6453 61.5225 73.4241C57.8128 77.1338 57.8128 83.1446 61.5225 86.8542C63.3045 88.6362 64.3047 91.0513 64.3047 93.5676L64.3047 178.26C64.3047 185.252 58.6358 190.92 51.6438 190.92Z"
+                        fill="#D9D9D9" />
+                </clipPath>
+            </defs>
+            <path d="M51.6438 190.92H13.6611C6.66909 190.92 1.00017 185.252 1.00017 178.26L1.00017 93.5676C1.00017 91.0481 2.00038 88.6331 3.78241 86.8542C7.49205 83.1446 7.49205 77.1338 3.78241 73.4241C2.00038 71.6421 1.00017 69.2271 1.00017 66.7107V61.8173C1.00017 47.5579 8.1251 34.2418 19.9915 26.3319V20.0015L45.3133 20.0015V26.3319C57.1798 34.2387 64.3047 47.5548 64.3047 61.8141L64.3047 66.7107C64.3047 69.2302 63.3045 71.6453 61.5225 73.4241C57.8128 77.1338 57.8128 83.1446 61.5225 86.8542C63.3045 88.6362 64.3047 91.0513 64.3047 93.5676L64.3047 178.26C64.3047 185.252 58.6358 190.92 51.6438 190.92Z"
+                stroke="black" stroke-width="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    </div>
+
+    <script src="popup.js" nonce="random123"></script>
+
+
+</body>
+
+</html>
